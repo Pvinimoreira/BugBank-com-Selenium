@@ -41,6 +41,17 @@ public class LoginDriver {
                 .getText());
     }
 
+    @Test
+    public void validarCampoFormatoEmail(){
+        driver.findElement(By.xpath("//div[@class='card__login']//input[@type='email']")).sendKeys("abc");
+        Assert.assertEquals("Formato inválido", driver.findElement(By.xpath("//div[@class=\"style__ContainerFieldInput-sc-s3e9ea-0 kOeYBn input__child\"]//p"))
+                .getText());
+    }
+
+    @Test
+    public void validarElementosPaginaLogin(){
+
+    }
 
     @After
     public void finalizar(){
